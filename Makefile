@@ -7,6 +7,7 @@ SPHINXBUILD   = sphinx-build
 SPHINXPROJ    = TestDocumentation
 SOURCEDIR     = .
 BUILDDIR      = build
+PUBLISHDIR    = docs
 
 # Put it first so that "make" without argument is like "make help".
 help:
@@ -18,3 +19,7 @@ help:
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
 %: Makefile
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+
+install: html
+	@mkdir -p $(PUBLISHDIR)
+	@cp -r $(BUILDDIR)/html/* $(PUBLISHDIR)/
