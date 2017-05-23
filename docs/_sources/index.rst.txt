@@ -23,7 +23,7 @@ Getting Started
     import sys
     sys.path.insert(0, 'path/to/your/code') 
 
-#. Add ``sphinx.ext.napoleon`` to the list of extensions to enable numpy-style docstrings (optional).
+#. (Optional) Add ``sphinx.ext.napoleon`` to the list of extensions to enable numpy-style docstrings.
 
 #. Add to your rst file::
 
